@@ -4,5 +4,5 @@ class Spell:
     def display_name(self):
         return f"[{self.name}]"
 
-    def cast(self, target: 'BaseUnit') -> None:
+    def cast(self, target) -> None:
         raise NotImplementedError

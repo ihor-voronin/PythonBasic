@@ -1,9 +1,9 @@
 from typing import List
 
+from lesson_13.game.monsters import Goblin, Monster
+from lesson_13.game.player.base import Player
 from lesson_13.game.player.fighter import Fighter
 from lesson_13.game.player.ranger import Ranger
-from lesson_13.game.player.base import Player
-from lesson_13.game.monsters import Monster, Goblin
 
 player: Player
 monsters: List[Monster] = []
@@ -19,10 +19,12 @@ if __name__ == "__main__":
     player_name = input("Input player name: ")
     selected_class = 0
     while selected_class < 1 or selected_class > 2:
-        print("""Select class:
+        print(
+            """Select class:
         1 - Ranger
         2 - Fighter
-        """)
+        """
+        )
         try:
             selected_class = int(input("select class: "))
         except ValueError as e:
@@ -43,7 +45,9 @@ if __name__ == "__main__":
     while not player.is_dead() or all([not monster.is_dead() for monster in monsters]):
         print(f"Player turn!")
         select_action = 0
-        while select_action < 1 or select_action > (2 - int(not player.can_cast_spell())):
+        while select_action < 1 or select_action > (
+            2 - int(not player.can_cast_spell())
+        ):
             print("Select action:")
             print("1 - attack damage")
             if player.can_cast_spell():
@@ -78,5 +82,3 @@ if __name__ == "__main__":
         elif len(not_dead_monsters) == 0:
             print("YOU WIN!!!")
             break
-
-

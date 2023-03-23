@@ -1,5 +1,15 @@
-import test_module
+import random
+
+# from pprint import pprint
+from pprint import *
+
 import modules_example_2
+import test_module
+import turtle_draw
+from sub_module.sub_sub_module.file import print_hello
+
+import lesson_07_1
+from lesson_10.sub_module.sub_file_with_code import print_something
 
 # from test_module import PI as t_PI
 # from test_module import long_long_long_long_long_long_long_long_long_long_long_name as l_name
@@ -14,17 +24,8 @@ import modules_example_2
 # test_module.long_long_long_long_long_long_long_long_long_long_long_name()
 # l_name()
 
-import random
 # import pprint
 
-# from pprint import pprint
-from pprint import *
-
-import turtle_draw
-
-import lesson_07_1
-from lesson_10.sub_module.sub_file_with_code import print_something
-from sub_module.sub_sub_module.file import print_hello
 
 # pprint.pprint(str(dir()))
 pprint(str(dir()))
@@ -36,4 +37,3 @@ if __name__ == "__main__":
     print_something()
     print_hello()
     modules_example_2.me_2_print()
-
