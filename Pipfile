@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 black = "*"
+beautifulsoup4 = "*"
+httpx = "*"
 
 [dev-packages]
 isort = "==5.12.0"
